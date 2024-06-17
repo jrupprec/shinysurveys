@@ -62,7 +62,7 @@ showDependence <- function(input = input, df) {
 
     # Using the first dependence value for a question
     # assumes all dependence values per question are equal
-    if (any(input[[df$dependence[1]]] == df$dependence_value[1])) {
+    if (any(input[[df$dependence[1]]] %in% df$dependence_value[1])) {
         remove_class(
           .id = paste0(df$input_id[1], "-question"),
           .class = "dependence"
